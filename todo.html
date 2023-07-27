@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo list </title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+
+        .container {
+
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            width: 100vw;
+
+            background-image: linear-gradient(to right, #434343 0%, black 100%);
+
+        }
+
+        .todoapp {
+            color: aliceblue;
+            box-sizing: content-box;
+            /* height: auto; */
+            /* width: 100%; */
+            max-width: 600px;
+            margin-top: 150px;
+            margin-bottom: 200px;
+
+
+
+
+
+            background-color: #4d4855;
+            background-image: linear-gradient(147deg, #4d4855 0%, #000000 74%);
+
+            background-color: #a399b2;
+            background-image: linear-gradient(147deg, #a399b2 0%, #4d4855 74%);
+
+            /* background: linear-gradient(to top,#a1bfc4,#a19bc3); */
+
+            border-radius: 25px;
+        }
+
+        .todoapp h5 {
+            padding: 10px 10px;
+            text-align: center;
+            font-size: 25px;
+
+        }
+
+        .row {
+            display: flex;
+            background-color: rgb(203, 203, 203);
+            align-items: center;
+            justify-content: space-between;
+            padding-left: 10px;
+            border-radius: 40px;
+
+            margin: 5px 5px;
+        }
+
+        .checked {
+            text-decoration: line-through;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+
+            margin: 10px 10px;
+
+            list-style: none;
+
+
+        }
+
+        ul li {
+            font-size: 17px;
+            font-family: monospace;
+            position: relative;
+
+            padding: 10px 10px;
+            cursor: pointer;
+        }
+
+        ul li span {
+            height: 20px;
+            width: 20px;
+            padding: 10px 10px;
+            position: absolute;
+            top: 5px;
+            right: 0px;
+            cursor: pointer;
+        }
+
+        #input {
+
+            border: none;
+            outline: none;
+            background: transparent;
+            font-size: 15px;
+            padding: 10px;
+        }
+
+        .row button {
+
+            border: none;
+            outline: none;
+            background-color: rgb(183 173 219);
+            border-radius: 30px;
+            padding: 12px 50px;
+            font-size: medium;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="todoapp">
+            <h5>To do list</h5>
+            <div class="row">
+                <input type="text" placeholder="Add your note" id="input"> <button id="submit-btn">submit</button>
+            </div>
+            <ul id="tasklist"></ul>
+        </div>
+
+    </div>
+    <script src="todo.js"></script>
+</body>
+
+</html>
